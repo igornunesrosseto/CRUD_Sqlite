@@ -3,6 +3,8 @@ package com.ems.bdsqlitefull.pojo;
 import java.io.Serializable;
 
 // POJO - Plain Old Java Objects
+// all good //
+
 public class Aluno implements Serializable {
     private int id;
     private String ra;
