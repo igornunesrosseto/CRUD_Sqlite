@@ -33,7 +33,7 @@ public class Insert extends AppCompatActivity {
         // Abertura ou criação do Banco de Dados
         db = openOrCreateDatabase("db_aluno", Context.MODE_PRIVATE, null);
 
-        // Cria a tabela se não existir, senão carrega a tabela para uso // btw listall nao cria tabela
+        // Cria a tabela se não existir, senão carrega a tabela para uso //
         db.execSQL("CREATE TABLE IF NOT EXISTS aluno(" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "ra VARCHAR NOT NULL, " +
@@ -60,8 +60,8 @@ public class Insert extends AppCompatActivity {
                 // Cria um objeto Aluno para receber os dados
                 if(ra.getText().toString().isEmpty() | nome.getText().toString().isEmpty() |
                         curso.getText().toString().isEmpty()| campus.getText().toString().isEmpty()){
-                    Toast.makeText(getApplicationContext(), "Há Campos em branco", Toast.LENGTH_SHORT).show();
-
+                    Toast.makeText(getApplicationContext(), "Não são permitidos campos em branco", Toast.LENGTH_SHORT).show();
+                    // com if é verificada a presença de campos em branco
                 }else {
                     Aluno aluno = new Aluno();
                     aluno.setRa(ra.getText().toString());
@@ -89,7 +89,7 @@ public class Insert extends AppCompatActivity {
 
                     // chamando o activity listall com delay de 1s.
 
-                    Handler waitTime = new Handler(); // método para aguardar tempo
+                    Handler waitTime = new Handler(); // método para aguardar tempo, delay de 1 seg
                     waitTime.postDelayed(new Runnable() {
                         @Override
                         public void run() {

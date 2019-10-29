@@ -65,8 +65,8 @@ public class EditRecord extends AppCompatActivity {
 
                     if (ra.getText().toString().isEmpty() | nome.getText().toString().isEmpty() |
                             curso.getText().toString().isEmpty() | campus.getText().toString().isEmpty()) {
-                        Toast.makeText(getApplicationContext(), "Há Campos em branco", Toast.LENGTH_SHORT).show();
-
+                        Toast.makeText(getApplicationContext(), "Não são permitidos campos em branco", Toast.LENGTH_SHORT).show();
+                        // com if é verificada a presença de campos em branco
                     } else {
 
                         Aluno novosDados = new Aluno();

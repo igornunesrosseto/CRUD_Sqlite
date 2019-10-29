@@ -3,9 +3,6 @@ package com.ems.bdsqlitefull.utils;
 import android.app.AlertDialog;
 import android.content.Context;
 
-/**
- * Created by Edson Melo de Souza on 18/10/2017.
- */
 public class Message {
     private Context _context;
 

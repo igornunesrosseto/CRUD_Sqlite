@@ -29,7 +29,7 @@ public class ListAll extends AppCompatActivity {
     ArrayAdapter<Aluno> adaptador;
     SQLiteDatabase db;
     Button btInsert;
-   //  ConstraintLayout changeBG; //
+
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,7 +46,7 @@ public class ListAll extends AppCompatActivity {
         // Abre o banco de dados existente
         db = openOrCreateDatabase("db_aluno", Context.MODE_PRIVATE, null);
 
-      //   changeBG = findViewById(R.id.cl1); // troca background //
+
         listViewAlunos = findViewById(R.id.listagem);
         btInsert = findViewById((R.id.btMainInsert2));
 
@@ -58,11 +58,14 @@ public class ListAll extends AppCompatActivity {
             }
         });
 
-       // changeBG.setBackgroundResource(R.drawable.circuitsbg); //
+
 
         alunos.clear();
 
-        // foi utilizado try catch para caso ocorra erro devido a ausencia da tabela aluno
+
+        /* Devido a ausencia da query para criaçao da tabela na classe Listall, foi utilizado
+            try catch para contornar um erro que ocorria devido
+            a sua falta. */
 
         try{
             // Carrega os registros em ordem alfabética no ArrayList para anexar ao adaptador
